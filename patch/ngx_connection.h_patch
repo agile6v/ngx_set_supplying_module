@@ -1,0 +1,12 @@
+--- src/core/ngx_connection.h	2013-03-01 08:10:48.359915950 +0800
++++ src/core/ngx_connection.h.patch	2013-03-01 08:23:06.592901756 +0800
+@@ -122,6 +122,9 @@
+     ngx_recv_chain_pt   recv_chain;
+     ngx_send_chain_pt   send_chain;
+ 
++	ngx_str_t			*ori_src_ip;
++	ngx_str_t			*ori_dst_ip;
++	
+     ngx_listening_t    *listening;
+ 
+     off_t               sent;
